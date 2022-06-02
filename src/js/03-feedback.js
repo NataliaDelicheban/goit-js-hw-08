@@ -23,9 +23,9 @@ function cleanForm(e) {
 };
 
 function rebootForm() {
-    const formContent = JSON.parse(localStorage.getItem("feedback-form-state")) || "";
-    console.log(formContent.email);
+    const formTextContent = JSON.parse(localStorage.getItem("feedback-form-state")) || "";
+    console.log(formTextContent.email);
     console.log(email.value);
-    email.value = formContent.email;
-    message.textContent = formContent.message;
+    email.value = formTextContent.email;
+    message.textContent = formTextContent.message;
 };
