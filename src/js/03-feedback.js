@@ -20,7 +20,7 @@ function cleanForm(e) {
     console.log(localStorage.getItem("feedback-form-state"));
     localStorage.removeItem("feedback-form-state");
     form.reset();
-}
+};
 
 function rebootForm() {
     const formContent = JSON.parse(localStorage.getItem("feedback-form-state")) || "";
