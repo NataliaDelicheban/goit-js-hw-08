@@ -21,7 +21,7 @@ function cleanForm(e) {
     localStorage.removeItem("feedback-form-state");
     form.reset();
 }
-//rebootForm()
+
 function rebootForm() {
     const formContent = JSON.parse(localStorage.getItem("feedback-form-state")) || "";
     console.log(formContent.email);
