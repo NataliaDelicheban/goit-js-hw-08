@@ -19,8 +19,10 @@ function rebootForm() {
   const formTextContent = localStorage.getItem(formKey) || '';
   if (formTextContent) {
     const parsedTextContent = JSON.parse(formTextContent);
-    email.value = parsedTextContent.email;
-    message.value = parsedTextContent.message;
+    email.value = parsedTextContent.email ? parsedTextContent.email : '';
+    message.value = parsedTextContent.message ? parsedTextContent.message : '';
+    //   email.value = parsedTextContent.email;
+    //   message.value = parsedTextContent.message;
   }
   return {
     email: email.value,
@@ -37,5 +39,6 @@ function cleanForm(e) {
   }
   console.log(formData);
   localStorage.removeItem(formKey);
+  formData = {};
   form.reset();
 }
